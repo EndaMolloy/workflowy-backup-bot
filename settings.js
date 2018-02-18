@@ -1,0 +1,6 @@
+module.exports = {
+  WORKFLOWY_USERNAME: process.env.WORKFLOWY_USERNAME,
+  WORKFLOWY_PASSWORD: process.env.WORKFLOWY_PASSWORD,
+  MAILGUN_USER: process.env.MAILGUN_USER,
+  MAILGUN_PASS: process.env.MAILGUN_PASS
+}

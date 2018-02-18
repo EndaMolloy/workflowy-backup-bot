@@ -1,0 +1,16 @@
+{
+  "name": "workflowy-backup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^5.0.0",
+    "nodemailer": "^4.4.2",
+    "puppeteer": "^1.1.0"
+  }
+}
