@@ -20,9 +20,7 @@ module.exports = async () => {
   await page.keyboard.type(settings.WORKFLOWY_PASSWORD);
   await page.keyboard.press('Enter');
 
-  await page.waitForSelector('#buttonBar', {
-    visible: true
-  });
+  await page.waitForSelector('#buttonBar');
   await page.waitFor(1000);
 
   await page.click('#buttonBar');
