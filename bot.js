@@ -3,11 +3,11 @@ const puppeteer = require('puppeteer');
 const settings = require('./settings');
 const mailer = require('./nodemailer');
 
-(async () => {
+module.exports = async () => {
   //args: ['--no-sandbox', '--disable-setuid-sandbox']
   //setting up puppeteer on Ubuntu and deployment on heroku
   //https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
-  const browser = await puppeteer.launch({
+  const browser = await puppeteer.launch({headless:false,
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
   const page = await browser.newPage();
@@ -37,6 +37,6 @@ const mailer = require('./nodemailer');
 
   browser.close();
 
-  await mailer.sendEmail(workflowyText);
+  //await mailer.sendEmail(workflowyText);
 
-})();
+}
