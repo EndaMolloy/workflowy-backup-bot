@@ -7,7 +7,7 @@ module.exports = async () => {
   //args: ['--no-sandbox', '--disable-setuid-sandbox']
   //setting up puppeteer on Ubuntu and deployment on heroku
   //https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
-  const browser = await puppeteer.launch({headless:false,
+  const browser = await puppeteer.launch({
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
   const page = await browser.newPage();
