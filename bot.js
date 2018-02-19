@@ -20,9 +20,6 @@ module.exports = async () => {
   await page.keyboard.type(settings.WORKFLOWY_PASSWORD);
   await page.keyboard.press('Enter');
 
-  // await page.waitForSelector('#buttonBar', {
-  //   visible: true
-  // });
   await page.waitFor(12000);
 
   await page.click('#buttonBar');
@@ -36,7 +33,7 @@ module.exports = async () => {
   });
 
   browser.close();
-  
+
   await mailer.sendEmail(workflowyText);
 
 }
