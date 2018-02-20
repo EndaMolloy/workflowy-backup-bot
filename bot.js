@@ -20,6 +20,7 @@ module.exports = async () => {
   await page.keyboard.type(settings.WORKFLOWY_PASSWORD);
   await page.keyboard.press('Enter');
 
+  //wait for page to fully load on slow connections
   await page.waitFor(12000);
 
   await page.click('#buttonBar');
@@ -28,12 +29,13 @@ module.exports = async () => {
   await page.click('#id_text');
   await page.waitFor(1000);
 
+  //get a hold of the text
   const workflowyText = await page.evaluate(() => {
     return document.querySelector('#exportPopup > div.previewWindow.hasText').innerText;
   });
 
   browser.close();
-
-  await mailer.sendEmail(workflowyText);
+  console.log("successfull run!");
+  //await mailer.sendEmail(workflowyText);
 
 }
