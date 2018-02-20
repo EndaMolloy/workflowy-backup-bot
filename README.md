@@ -26,7 +26,7 @@ Create new Heroku bot:
 
 `heroku create YOURAPPNAME`
 
-Add the puppeteer heroku buildpack:
+Add the puppeteer heroku buildpack (Note: The node version is specified in package.json so the node buildpack gets added automatically):
 
 `https://github.com/jontewks/puppeteer-heroku-buildpack.git`
 
