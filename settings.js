@@ -5,7 +5,7 @@ module.exports = {
 
   //Mailgun settings
   MAILGUN_SMTP_LOGIN: process.env.MAILGUN_SMTP_LOGIN,
-  MAILGUN_PASS: process.env.MAILGUN_PASS,
+  MAILGUN_PASSWORD: process.env.MAILGUN_PASSWORD,
 
   //Cronjob time schedule
   //At 04:05 every Monday

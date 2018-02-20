@@ -4,8 +4,8 @@ const settings = require("./settings");
 const transporter = nodemailer.createTransport({
   service: "Mailgun",
   auth: {
-    user: settings.MAILGUN_USER,
-    pass: settings.MAILGUN_PASS
+    user: settings.MAILGUN_SMTP_LOGIN,
+    pass: settings.MAILGUN_PASSWORD
   },
   tls: {
     rejectUnauthorized: false
