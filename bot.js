@@ -35,7 +35,7 @@ module.exports = async () => {
   });
 
   browser.close();
-  console.log("successfull run!");
-  //await mailer.sendEmail(workflowyText);
+
+  await mailer.sendEmail(workflowyText);
 
 }
